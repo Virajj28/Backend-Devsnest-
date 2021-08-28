@@ -1,0 +1,65 @@
+
+#SQL & REDIS BASICS
+
+Redis Installation:
+For Windows
+	- Enable WSL from "Turn Windows features on or off settings"
+	- Restart the machine
+	- Install Ubuntu20.04 from Windows Store
+	- Open Ubuntu and setup name and password
+	- Run the following commands:
+		> sudo apt-get update
+		> sudo apt-get upgrade
+		> sudo apt-get install redis-server
+		> sudo service redis-server restart
+		> redis-cli
+
+How to work on it =>
+- SET key value
+- GET key
+- ttl key                (time to live)
+- KEYS *
+- DEL key
+- FLUSHALL               (delete all keys)
+- EXISTS key             (check if key exists)
+- expire key time        (set time to live)
+- setex key time value   (set time to live and value)
+	
+
+For Arrays => {0th Index/Initial is always l , last index is always r}
+- LPUSH array value
+- RPUSH array value
+- LRANGE array start stop
+- LPOP array
+- RPOP array
+
+
+For Sets =>   {Repeteable element can't be in it}
+- SADD mySet value
+- SMEMBERS mySet
+- SREM mySet value
+
+
+For Object/Hash =>
+- HSET key field value 
+- HGET key field
+- HGETALL key
+- HDEL key field
+- HEXISTS key field
+
+
+
+----SQL BASICS----
+
+
+Collection of Tables is Database.
+POSTGRESQL is a Database.
+
+# CREATE DATABASE databaseName;
+# GRANT ALL PRIVILEGES ON databaseName TO userName;   (~SELECT, INSERT, UPDATE, DELETE)
+# \l     (list all databases)
+# \d     (list all tables)
+# \c     (connect to database)
+# \q     (quit)
+
+
