@@ -10,7 +10,7 @@ var root = __dirname;
 app.set("views", path.join(root, "/views"));
 app.set("view engine", "jade");
 app.use("/", (req, res) => {
-  res.render("content", { name: "Saksham " });
+  res.render("content", { name: "Nervebody" });
 });
 
 app.get("/", (req, res) => {
