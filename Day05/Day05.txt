@@ -56,13 +56,36 @@ Work with Multiple File:
     var fs= require("fs")
     fs.mkdirSync('folderName')
 
+-----Delete a folder by node js-----
+    fs.rmdirSync('folderName')
+
 ----Create a file by node js----
-    fs.fileWriteSync("folderName/fileName", "file content")
-    eg.
+    fs.writeFileSync("folderName/fileName", "file content")
+    
+    eg. \\error function can be exception
     var fs= require("fs")
     fs.writeFileSync("Day05/write.txt", "Hello World",function(err){
         if(err){
             console.log(err)
             }
             });
+
+------To update a file------
+    fs.appendFileSync("Day05/write.txt", "Nervebody here");
         
+------To read a file------
+    fs.readFileSync("Day05/write.txt", "utf-8");  \\If don't give utf-8 then it will give buffer which gives data in small chunks.
+
+    -without utf-8 -
+    Output: 
+    b<Buffer 48 65 6c 6c 6f 20 57 6f 72 6c 64 50 65 65 70
+     73 2c 4e 65 72 76 65 62 6f 64 79 20 68 65 72 65 2e> 
+
+-------Rename a file-------
+    fs..renameSync("Day05/write.txt", "Day05/GotIt.txt");
+    \\ And the old file will be deleted.
+
+-----Delete a file-------
+    fs.unlinkSync("Day05/GotIt.txt");
+
+
