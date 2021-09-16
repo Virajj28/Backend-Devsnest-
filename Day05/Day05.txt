@@ -51,3 +51,18 @@ Loop Problems in cli:
 Work with Multiple File:
     1. write the whole code in a js file
     2. and run it node filename
+
+----Create a folder by node js----
+    var fs= require("fs")
+    fs.mkdirSync('folderName')
+
+----Create a file by node js----
+    fs.fileWriteSync("folderName/fileName", "file content")
+    eg.
+    var fs= require("fs")
+    fs.writeFileSync("Day05/write.txt", "Hello World",function(err){
+        if(err){
+            console.log(err)
+            }
+            });
+        
