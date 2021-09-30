@@ -10,12 +10,16 @@ router.get('/', function(req, res, next) {
  * @requires { email, firstName, lastName, password, confirmPassword } - req.body
  * @description 
  * Security, Performance and edge cases
+ * Level 1
  * Validates the email
  * Validates the password
  * password and confirmPassword match
- * JS / SQL (JS & SQL INJECTION) -THA 
+ * Level 2
+ * JS / SQL (JS & SQL INJECTION) -THA
+ * Level 3
+ * check if email exists 
  * password hash
- * email lowercase nervebody@gmail.com/ Nervebody@gmail.com
+ * email lowercase nervebody@gmail.com / Nervebody@gmail.com
  * save user to DBS
  */
 router.post('/register',)
